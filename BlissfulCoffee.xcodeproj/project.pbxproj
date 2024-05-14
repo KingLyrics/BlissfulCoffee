@@ -54,12 +54,16 @@
 		A890959B2BF364E000B010DC /* BlissfulCoffee */ = {
 			isa = PBXGroup;
 			children = (
-				A89095AD2BF3861400B010DC /* Info.plist */,
-				A89095AA2BF3855F00B010DC /* Font */,
-				A890959C2BF364E000B010DC /* BlissfulCoffeeApp.swift */,
-				A890959E2BF364E000B010DC /* ContentView.swift */,
+				A89095B22BF3871F00B010DC /* App */,
 				A89095A02BF364E200B010DC /* Assets.xcassets */,
+				A890959E2BF364E000B010DC /* ContentView.swift */,
+				A89095B12BF3871700B010DC /* Core */,
+				A89095B02BF3871300B010DC /* Extensions */,
+				A89095AA2BF3855F00B010DC /* Font */,
+				A89095AD2BF3861400B010DC /* Info.plist */,
+				A89095AE2BF386FB00B010DC /* Models */,
 				A89095A22BF364E200B010DC /* Preview Content */,
+				A89095B32BF3876200B010DC /* Utils */,
 			);
 			path = BlissfulCoffee;
 			sourceTree = "<group>";
@@ -78,6 +82,58 @@
 				A89095AB2BF3857E00B010DC /* Sora-Light.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		A89095AE2BF386FB00B010DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A89095B02BF3871300B010DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A89095B12BF3871700B010DC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A89095B52BF387C600B010DC /* IntialLaunchScreen */,
+				A89095B42BF387B000B010DC /* Components */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A89095B22BF3871F00B010DC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A890959C2BF364E000B010DC /* BlissfulCoffeeApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A89095B32BF3876200B010DC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A89095B42BF387B000B010DC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A89095B52BF387C600B010DC /* IntialLaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IntialLaunchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
