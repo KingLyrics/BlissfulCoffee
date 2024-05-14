@@ -27,6 +27,7 @@
 		A89095D22BF3C1BF00B010DC /* Sora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A89095D02BF3C1BF00B010DC /* Sora-Bold.ttf */; };
 		A89095D52BF3C84700B010DC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095D42BF3C84700B010DC /* HomeViewModel.swift */; };
 		A89095D82BF3C89F00B010DC /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095D72BF3C89F00B010DC /* HomeService.swift */; };
+		A89095DB2BF3D5A500B010DC /* CoffeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095DA2BF3D5A500B010DC /* CoffeeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		A89095D02BF3C1BF00B010DC /* Sora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-Bold.ttf"; sourceTree = "<group>"; };
 		A89095D42BF3C84700B010DC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A89095D72BF3C89F00B010DC /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		A89095DA2BF3D5A500B010DC /* CoffeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,12 +181,10 @@
 		A89095B62BF3906D00B010DC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A89095D92BF3D55700B010DC /* Views */,
 				A89095D62BF3C89100B010DC /* Service */,
 				A89095D32BF3C80F00B010DC /* ViewModel */,
-				A89095B72BF3907700B010DC /* HomeView.swift */,
-				A89095BD2BF39B9200B010DC /* HeaderView.swift */,
 				A89095BF2BF39F2400B010DC /* SearchBar.swift */,
-				A89095CB2BF3BA4100B010DC /* CoffeeCardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -203,6 +203,17 @@
 				A89095D72BF3C89F00B010DC /* HomeService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		A89095D92BF3D55700B010DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A89095CB2BF3BA4100B010DC /* CoffeeCardView.swift */,
+				A89095BD2BF39B9200B010DC /* HeaderView.swift */,
+				A89095B72BF3907700B010DC /* HomeView.swift */,
+				A89095DA2BF3D5A500B010DC /* CoffeeDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +302,7 @@
 				A89095D82BF3C89F00B010DC /* HomeService.swift in Sources */,
 				A89095C82BF3B59000B010DC /* Coffee.swift in Sources */,
 				A890959F2BF364E000B010DC /* ContentView.swift in Sources */,
+				A89095DB2BF3D5A500B010DC /* CoffeeDetailView.swift in Sources */,
 				A890959D2BF364E000B010DC /* BlissfulCoffeeApp.swift in Sources */,
 				A89095C02BF39F2400B010DC /* SearchBar.swift in Sources */,
 			);
