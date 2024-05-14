@@ -6,6 +6,9 @@
 	<array>
 		<string>Sora-Light.ttf</string>
 		<string>Sora-ExtraBold.ttf</string>
+		<string>Sora-Regular.ttf</string>
+		<string>Sora-SemiBold.ttf</string>
+		<string>Sora-Bold.ttf</string>
 	</array>
 </dict>
 </plist>

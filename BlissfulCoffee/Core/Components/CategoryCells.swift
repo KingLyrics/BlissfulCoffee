@@ -14,8 +14,8 @@ struct CategoryCells: View {
     var body: some View {
         Text(typeOfCoffee)
             .foregroundStyle(isSelected ? .offWhite : .ashBlack)
-            .font(.custom(isSelected ? "Sora-ExtraBold" : "Sora-Light", size: 16))
-            .padding(.vertical,12)
+            .font(.custom(isSelected ? "Sora-ExtraBold" : "Sora-Light", size: 14))
+            .padding(.vertical,10)
             .padding(.horizontal)
             .background(isSelected ? .darkBrown : .offGray)
             .clipShape(RoundedRectangle(cornerRadius: 6))

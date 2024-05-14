@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @State private var selectedCategory:CoffeTypes = .allCoffee
     var body: some View {
-            HeaderView()
+        HeaderView()
         ScrollView{
             ScrollView(.horizontal){
                 HStack(spacing: 22){

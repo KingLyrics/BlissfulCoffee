@@ -19,6 +19,12 @@
 		A89095C02BF39F2400B010DC /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095BF2BF39F2400B010DC /* SearchBar.swift */; };
 		A89095C42BF3ABD000B010DC /* CategoryCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095C32BF3ABD000B010DC /* CategoryCells.swift */; };
 		A89095C62BF3B04D00B010DC /* CoffeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095C52BF3B04D00B010DC /* CoffeTypes.swift */; };
+		A89095C82BF3B59000B010DC /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095C72BF3B59000B010DC /* Coffee.swift */; };
+		A89095CA2BF3B6CF00B010DC /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095C92BF3B6CF00B010DC /* DeveloperPreview.swift */; };
+		A89095CC2BF3BA4100B010DC /* CoffeeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095CB2BF3BA4100B010DC /* CoffeeCardView.swift */; };
+		A89095CE2BF3C18700B010DC /* Sora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A89095CD2BF3C18700B010DC /* Sora-Regular.ttf */; };
+		A89095D12BF3C1BF00B010DC /* Sora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A89095CF2BF3C1BF00B010DC /* Sora-SemiBold.ttf */; };
+		A89095D22BF3C1BF00B010DC /* Sora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A89095D02BF3C1BF00B010DC /* Sora-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		A89095BF2BF39F2400B010DC /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		A89095C32BF3ABD000B010DC /* CategoryCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCells.swift; sourceTree = "<group>"; };
 		A89095C52BF3B04D00B010DC /* CoffeTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeTypes.swift; sourceTree = "<group>"; };
+		A89095C72BF3B59000B010DC /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		A89095C92BF3B6CF00B010DC /* DeveloperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperPreview.swift; sourceTree = "<group>"; };
+		A89095CB2BF3BA4100B010DC /* CoffeeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCardView.swift; sourceTree = "<group>"; };
+		A89095CD2BF3C18700B010DC /* Sora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-Regular.ttf"; sourceTree = "<group>"; };
+		A89095CF2BF3C1BF00B010DC /* Sora-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-SemiBold.ttf"; sourceTree = "<group>"; };
+		A89095D02BF3C1BF00B010DC /* Sora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				A89095BB2BF396D800B010DC /* Sora-ExtraBold.ttf */,
+				A89095CD2BF3C18700B010DC /* Sora-Regular.ttf */,
+				A89095D02BF3C1BF00B010DC /* Sora-Bold.ttf */,
+				A89095CF2BF3C1BF00B010DC /* Sora-SemiBold.ttf */,
 				A89095AB2BF3857E00B010DC /* Sora-Light.ttf */,
 			);
 			path = Font;
@@ -103,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				A89095C52BF3B04D00B010DC /* CoffeTypes.swift */,
+				A89095C72BF3B59000B010DC /* Coffee.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -110,6 +126,7 @@
 		A89095B02BF3871300B010DC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A89095C92BF3B6CF00B010DC /* DeveloperPreview.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -161,6 +178,7 @@
 				A89095B72BF3907700B010DC /* HomeView.swift */,
 				A89095BD2BF39B9200B010DC /* HeaderView.swift */,
 				A89095BF2BF39F2400B010DC /* SearchBar.swift */,
+				A89095CB2BF3BA4100B010DC /* CoffeeCardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -223,10 +241,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A89095D22BF3C1BF00B010DC /* Sora-Bold.ttf in Resources */,
 				A89095A42BF364E200B010DC /* Preview Assets.xcassets in Resources */,
 				A89095BC2BF396D800B010DC /* Sora-ExtraBold.ttf in Resources */,
 				A89095A12BF364E200B010DC /* Assets.xcassets in Resources */,
 				A89095AC2BF3857E00B010DC /* Sora-Light.ttf in Resources */,
+				A89095D12BF3C1BF00B010DC /* Sora-SemiBold.ttf in Resources */,
+				A89095CE2BF3C18700B010DC /* Sora-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +263,9 @@
 				A89095C42BF3ABD000B010DC /* CategoryCells.swift in Sources */,
 				A89095C62BF3B04D00B010DC /* CoffeTypes.swift in Sources */,
 				A89095B82BF3907700B010DC /* HomeView.swift in Sources */,
+				A89095CA2BF3B6CF00B010DC /* DeveloperPreview.swift in Sources */,
+				A89095CC2BF3BA4100B010DC /* CoffeeCardView.swift in Sources */,
+				A89095C82BF3B59000B010DC /* Coffee.swift in Sources */,
 				A890959F2BF364E000B010DC /* ContentView.swift in Sources */,
 				A890959D2BF364E000B010DC /* BlissfulCoffeeApp.swift in Sources */,
 				A89095C02BF39F2400B010DC /* SearchBar.swift in Sources */,

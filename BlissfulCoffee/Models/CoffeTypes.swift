@@ -9,7 +9,16 @@ import Foundation
 
 enum CoffeTypes:String,CaseIterable, Identifiable{
     case allCoffee = "All Coffee"
-    case espresso, americano, latte, cappuccino,mocha, macchiato
+    case espresso
+    case latte
+    case cappuccino
+    case americano
+    case macchiato
+    case mocha
+    case flatWhite
+    case coldBrew
+    case frappuccino
+    case ristretto
     
     var id:String{
         self.rawValue
