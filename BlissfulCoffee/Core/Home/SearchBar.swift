@@ -27,10 +27,19 @@ struct SearchBar: View {
             .padding(.horizontal)
             .background(.ashBlack)
             .clipShape(RoundedRectangle(cornerRadius: 12))
-            .frame(maxWidth: 200)
+            .frame(minWidth: 200, maxWidth: 290 )
             
-            Spacer()
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Image(systemName: "gearshape")
+                    .foregroundStyle(.offWhite)
+                    .padding(.vertical,12)
+                    .padding(.horizontal, 14)
+                    .background(.darkBrown)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+
+            })
         }
+        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
         
     }
 }

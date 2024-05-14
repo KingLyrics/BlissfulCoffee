@@ -31,6 +31,7 @@ struct HeaderView: View {
             .padding()
 
         }
+        .padding(.bottom,90)
         
         .frame(maxWidth:.infinity)
         .background(                    
