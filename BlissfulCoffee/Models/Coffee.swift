@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Coffee{
+struct Coffee: Hashable{
     let title:String
     let coffeType:CoffeTypes
     let price:Double
@@ -17,6 +17,8 @@ struct Coffee{
     let description:String
     let sizes:[String]
     let image:ImageResource
+    
+  
 }
 
 

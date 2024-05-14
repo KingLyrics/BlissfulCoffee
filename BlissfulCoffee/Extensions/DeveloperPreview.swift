@@ -8,7 +8,7 @@
 import Foundation
 
 class DeveloperPreview{
-    var coffes:[Coffee]=[
+    var coffees:[Coffee]=[
         
         Coffee(title: "Classic Espresso", coffeType: .espresso, price: 2.99, rating: 4.5, noOfComments: 120, description: "Our Classic Espresso offers a robust and intense coffee experience with deep, rich flavors. Perfect for those who appreciate a strong, aromatic cup. Made from carefully selected beans, it's a favorite among purists. Available in small, medium, and large sizes.", sizes: ["Small", "Medium", "Large"], image: .coffee1),
         
