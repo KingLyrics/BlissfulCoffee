@@ -9,12 +9,28 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        HeaderView()
-        Text("Welcome to Blissful Coffee")
-        Spacer()
+            HeaderView()
+        ScrollView{
+            ScrollView(.horizontal){
+                HStack(spacing: 22){
+                    ForEach(0..<10){ _ in
+                        CategoryCells(typeOfCoffee: "All Coffee")
+                    }
+                }
+            }
+            .scrollIndicators(.hidden)
+            
+            Text("Welcome to Blissful Coffee")
+            Spacer()
+        }
+        .padding()
+        
     }
 }
 
 #Preview {
     HomeView()
 }
+
+// promo card later
+

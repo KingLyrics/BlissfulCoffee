@@ -17,6 +17,8 @@
 		A89095BC2BF396D800B010DC /* Sora-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A89095BB2BF396D800B010DC /* Sora-ExtraBold.ttf */; };
 		A89095BE2BF39B9200B010DC /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095BD2BF39B9200B010DC /* HeaderView.swift */; };
 		A89095C02BF39F2400B010DC /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095BF2BF39F2400B010DC /* SearchBar.swift */; };
+		A89095C42BF3ABD000B010DC /* CategoryCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095C32BF3ABD000B010DC /* CategoryCells.swift */; };
+		A89095C62BF3B04D00B010DC /* CoffeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095C52BF3B04D00B010DC /* CoffeTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		A89095BB2BF396D800B010DC /* Sora-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-ExtraBold.ttf"; sourceTree = "<group>"; };
 		A89095BD2BF39B9200B010DC /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		A89095BF2BF39F2400B010DC /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		A89095C32BF3ABD000B010DC /* CategoryCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCells.swift; sourceTree = "<group>"; };
+		A89095C52BF3B04D00B010DC /* CoffeTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		A89095AE2BF386FB00B010DC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A89095C52BF3B04D00B010DC /* CoffeTypes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 		A89095B42BF387B000B010DC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A89095C32BF3ABD000B010DC /* CategoryCells.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -233,6 +239,8 @@
 			files = (
 				A89095BE2BF39B9200B010DC /* HeaderView.swift in Sources */,
 				A89095BA2BF390EC00B010DC /* LaunchScreen.swift in Sources */,
+				A89095C42BF3ABD000B010DC /* CategoryCells.swift in Sources */,
+				A89095C62BF3B04D00B010DC /* CoffeTypes.swift in Sources */,
 				A89095B82BF3907700B010DC /* HomeView.swift in Sources */,
 				A890959F2BF364E000B010DC /* ContentView.swift in Sources */,
 				A890959D2BF364E000B010DC /* BlissfulCoffeeApp.swift in Sources */,
