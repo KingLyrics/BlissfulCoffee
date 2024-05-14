@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Sora-Light.ttf</string>
+		<string>Sora-ExtraBold.ttf</string>
 	</array>
 </dict>
 </plist>

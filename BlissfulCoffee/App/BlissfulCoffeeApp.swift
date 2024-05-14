@@ -9,8 +9,6 @@ import SwiftUI
 
 @main
 struct BlissfulCoffeeApp: App {
-    @AppStorage("isFirstLaunch") private var isFirstLaunch: Bool = true
-
     var body: some Scene {
         WindowGroup {
             NavigationStack{

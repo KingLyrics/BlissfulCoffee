@@ -14,6 +14,7 @@
 		A89095AC2BF3857E00B010DC /* Sora-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A89095AB2BF3857E00B010DC /* Sora-Light.ttf */; };
 		A89095B82BF3907700B010DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095B72BF3907700B010DC /* HomeView.swift */; };
 		A89095BA2BF390EC00B010DC /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095B92BF390EC00B010DC /* LaunchScreen.swift */; };
+		A89095BC2BF396D800B010DC /* Sora-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A89095BB2BF396D800B010DC /* Sora-ExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A89095AD2BF3861400B010DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A89095B72BF3907700B010DC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A89095B92BF390EC00B010DC /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		A89095BB2BF396D800B010DC /* Sora-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-ExtraBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		A89095AA2BF3855F00B010DC /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				A89095BB2BF396D800B010DC /* Sora-ExtraBold.ttf */,
 				A89095AB2BF3857E00B010DC /* Sora-Light.ttf */,
 			);
 			path = Font;
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A89095A42BF364E200B010DC /* Preview Assets.xcassets in Resources */,
+				A89095BC2BF396D800B010DC /* Sora-ExtraBold.ttf in Resources */,
 				A89095A12BF364E200B010DC /* Assets.xcassets in Resources */,
 				A89095AC2BF3857E00B010DC /* Sora-Light.ttf in Resources */,
 			);
