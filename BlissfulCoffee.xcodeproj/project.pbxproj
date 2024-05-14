@@ -11,6 +11,7 @@
 		A890959F2BF364E000B010DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890959E2BF364E000B010DC /* ContentView.swift */; };
 		A89095A12BF364E200B010DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A89095A02BF364E200B010DC /* Assets.xcassets */; };
 		A89095A42BF364E200B010DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A89095A32BF364E200B010DC /* Preview Assets.xcassets */; };
+		A89095AC2BF3857E00B010DC /* Sora-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A89095AB2BF3857E00B010DC /* Sora-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		A890959E2BF364E000B010DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A89095A02BF364E200B010DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A89095A32BF364E200B010DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A89095AB2BF3857E00B010DC /* Sora-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-Light.ttf"; sourceTree = "<group>"; };
+		A89095AD2BF3861400B010DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,8 @@
 		A890959B2BF364E000B010DC /* BlissfulCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				A89095AD2BF3861400B010DC /* Info.plist */,
+				A89095AA2BF3855F00B010DC /* Font */,
 				A890959C2BF364E000B010DC /* BlissfulCoffeeApp.swift */,
 				A890959E2BF364E000B010DC /* ContentView.swift */,
 				A89095A02BF364E200B010DC /* Assets.xcassets */,
@@ -65,6 +70,14 @@
 				A89095A32BF364E200B010DC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A89095AA2BF3855F00B010DC /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A89095AB2BF3857E00B010DC /* Sora-Light.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +140,7 @@
 			files = (
 				A89095A42BF364E200B010DC /* Preview Assets.xcassets in Resources */,
 				A89095A12BF364E200B010DC /* Assets.xcassets in Resources */,
+				A89095AC2BF3857E00B010DC /* Sora-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +289,7 @@
 				DEVELOPMENT_TEAM = 943X57G6KF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlissfulCoffee/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +319,7 @@
 				DEVELOPMENT_TEAM = 943X57G6KF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlissfulCoffee/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
