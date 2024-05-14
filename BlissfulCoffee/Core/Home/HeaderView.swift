@@ -23,7 +23,7 @@ struct HeaderView: View {
                     }
                     .foregroundStyle(.offWhite)
                     
-                    
+                    SearchBar()
                 }
                 Spacer()
                 
@@ -33,7 +33,10 @@ struct HeaderView: View {
         }
         
         .frame(maxWidth:.infinity)
-        .background(.ashBlack)
+        .background(                    
+            LinearGradient(gradient: Gradient(colors: [Color(.darkGray), .black]), startPoint: .leading, endPoint: .trailing)
+          
+)
         
        
         
