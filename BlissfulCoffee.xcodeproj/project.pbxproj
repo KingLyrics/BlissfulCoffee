@@ -15,6 +15,8 @@
 		A89095B82BF3907700B010DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095B72BF3907700B010DC /* HomeView.swift */; };
 		A89095BA2BF390EC00B010DC /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095B92BF390EC00B010DC /* LaunchScreen.swift */; };
 		A89095BC2BF396D800B010DC /* Sora-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A89095BB2BF396D800B010DC /* Sora-ExtraBold.ttf */; };
+		A89095BE2BF39B9200B010DC /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095BD2BF39B9200B010DC /* HeaderView.swift */; };
+		A89095C02BF39F2400B010DC /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095BF2BF39F2400B010DC /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		A89095B72BF3907700B010DC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A89095B92BF390EC00B010DC /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		A89095BB2BF396D800B010DC /* Sora-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A89095BD2BF39B9200B010DC /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		A89095BF2BF39F2400B010DC /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +112,9 @@
 		A89095B12BF3871700B010DC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A89095B42BF387B000B010DC /* Components */,
 				A89095B62BF3906D00B010DC /* Home */,
 				A89095B52BF387C600B010DC /* IntialLaunchScreen */,
-				A89095B42BF387B000B010DC /* Components */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -149,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				A89095B72BF3907700B010DC /* HomeView.swift */,
+				A89095BD2BF39B9200B010DC /* HeaderView.swift */,
+				A89095BF2BF39F2400B010DC /* SearchBar.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -225,10 +231,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A89095BE2BF39B9200B010DC /* HeaderView.swift in Sources */,
 				A89095BA2BF390EC00B010DC /* LaunchScreen.swift in Sources */,
 				A89095B82BF3907700B010DC /* HomeView.swift in Sources */,
 				A890959F2BF364E000B010DC /* ContentView.swift in Sources */,
 				A890959D2BF364E000B010DC /* BlissfulCoffeeApp.swift in Sources */,
+				A89095C02BF39F2400B010DC /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

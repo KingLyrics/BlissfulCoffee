@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  SearchBar.swift
 //  BlissfulCoffee
 //
 //  Created by Ekomobong Edeme on 14/05/2024.
@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct SearchBar: View {
     var body: some View {
-        HeaderView()
-        Text("Welcome to Blissful Coffee")
-        Spacer()
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    HomeView()
+    SearchBar()
 }
