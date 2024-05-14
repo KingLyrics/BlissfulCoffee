@@ -7,6 +7,11 @@
 
 import Foundation
 
-enum CoffeTypes:String,CaseIterable{
+enum CoffeTypes:String,CaseIterable, Identifiable{
+    case allCoffee = "All Coffee"
     case espresso, americano, latte, cappuccino,mocha, macchiato
+    
+    var id:String{
+        self.rawValue
+    }
 }

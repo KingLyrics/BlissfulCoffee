@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var selectedCategory:CoffeTypes = .allCoffee
     var body: some View {
             HeaderView()
         ScrollView{
             ScrollView(.horizontal){
                 HStack(spacing: 22){
-                    ForEach(0..<10){ _ in
-                        CategoryCells(typeOfCoffee: "All Coffee")
+                    ForEach(CoffeTypes.allCases, id:\.self){ category in
+                        CategoryCells(
+                            typeOfCoffee: category.rawValue.capitalized,
+                            isSelected: category == selectedCategory
+                        )
+                        .onTapGesture {
+                            selectedCategory = category
+                        }
                     }
                 }
             }
