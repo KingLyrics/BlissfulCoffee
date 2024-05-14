@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("isFirstLaunch") private var isFirstLaunch: Bool = true
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-                .font(.custom("Sora-Light", size: 33))
+        Group{
+            if isFirstLaunch{
+                LaunchScreen(isFirstLaunch: $isFirstLaunch)
+            }else{
+                HomeView()
+            }
         }
-        .padding()
     }
 }
 
