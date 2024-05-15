@@ -9,13 +9,11 @@ import SwiftUI
 
 struct CoffeeDetailView: View {
     @State private var selectedCoffeeSize:Sizes = .Medium
+    @State private var isFavorite:Bool = false
     let coffee:Coffee
    
     
-    private let flexibleColumn = [
-        GridItem(.flexible(), spacing: 50),
-        GridItem(.flexible(), spacing: 40),
-    ]
+    
     
     var body: some View {
         NavigationStack{
@@ -30,7 +28,7 @@ struct CoffeeDetailView: View {
                         
                     
                     
-                    VStack(alignment: .leading , spacing: -5){
+                    VStack(alignment: .leading , spacing: 5){
                         Text(coffee.title)
                             .font(.custom("Sora-SemiBold", size: 20))
                         
@@ -39,12 +37,12 @@ struct CoffeeDetailView: View {
                                 .font(.custom("Sora-Regular", size: 15))
                                 .foregroundStyle(.gray)
                             
-                            HStack(spacing:15){
-                                IconBackground(imageName: "bicycle")
-                                IconBackground(imageName: "cup.and.saucer")
-                                IconBackground(imageName: "takeoutbag.and.cup.and.straw")
-                            }
-                            .offset(x:67,y:10)
+//                            HStack(spacing:15){
+//                                IconBackground(imageName: "bicycle")
+//                                IconBackground(imageName: "cup.and.saucer")
+//                                IconBackground(imageName: "takeoutbag.and.cup.and.straw")
+//                            }
+//                            .offset(x:67,y:10)
                             
                             
                         }
@@ -64,7 +62,7 @@ struct CoffeeDetailView: View {
                         
                         
                         Divider()
-                            .frame(width: 300, height: 20)
+                            .frame(width: 330, height: 20)
                         
                         VStack(alignment: .leading , spacing: 10) {
                             Text("Description")
@@ -89,8 +87,10 @@ struct CoffeeDetailView: View {
                                 
                             })
                             
-                            
+                           
+                    
                         }
+                        .padding(.bottom, 60)
                     }
                     
                     
@@ -102,28 +102,54 @@ struct CoffeeDetailView: View {
                 .padding(.leading, 9)
                 
             }
+            .navigationTitle("Detail")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar{
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        isFavorite.toggle()
+                    }, label: {
+                        Image(systemName: isFavorite ? "heart.fill" : "heart")
+                            .foregroundStyle(.ashBlack)
+                    })
+                }
+            }
 
         }
         
         .safeAreaInset(edge: .bottom) {
-            VStack{
-                Text("Price")
-                    .frame(maxWidth: .infinity)
-                    .background(.red)
+            HStack(spacing: 50){
+                VStack(alignment:.leading, spacing:5){
+                    Text("Price")
+                        .font(.custom("Sora-Regular", size: 14))
+                        .foregroundStyle(.gray)
+                    Text("$ \(String(format: "%.2f", coffee.price))")
+                        .font(.custom("Sora-SemiBold", size: 18))
+                        .foregroundStyle(.darkBrown)
+                    
+                }
+                
+                Button(action: {}, label: {
+                    Text("Buy Now")
+                        .font(.custom("Sora-SemiBold", size: 16))
+                        .foregroundStyle(.offWhite)
+                        .frame(width: 217, height: 56)
+                        .background(.darkBrown)
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                })
+                
                 
             }
+            .ignoresSafeArea(edges:.bottom)
+            .background(ignoresSafeAreaEdges: .horizontal)
+            .frame(maxWidth: .greatestFiniteMagnitude)
+          
+           
+
             
         }
-        .navigationTitle("Detail")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar{
-            ToolbarItem(placement: .topBarTrailing) {
-                Button(action: {}, label: {
-                    Image(systemName: "heart")
-                        .foregroundStyle(.ashBlack)
-                })
-            }
-        }
+      
+        
         .padding()
     }
 }
