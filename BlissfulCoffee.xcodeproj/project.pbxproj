@@ -94,7 +94,6 @@
 			children = (
 				A89095B22BF3871F00B010DC /* App */,
 				A89095A02BF364E200B010DC /* Assets.xcassets */,
-				A890959E2BF364E000B010DC /* ContentView.swift */,
 				A89095B12BF3871700B010DC /* Core */,
 				A89095B02BF3871300B010DC /* Extensions */,
 				A89095AA2BF3855F00B010DC /* Font */,
@@ -150,7 +149,8 @@
 				A89095B42BF387B000B010DC /* Components */,
 				A89095DF2BF4C07F00B010DC /* Favorite */,
 				A89095B62BF3906D00B010DC /* Home */,
-				A89095B52BF387C600B010DC /* IntialLaunchScreen */,
+				A89095B52BF387C600B010DC /* LaunchScreen */,
+				A89095E52BF4C20000B010DC /* Root */,
 				A89095DC2BF4BF7C00B010DC /* TabBar */,
 			);
 			path = Core;
@@ -179,12 +179,12 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		A89095B52BF387C600B010DC /* IntialLaunchScreen */ = {
+		A89095B52BF387C600B010DC /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
 				A89095B92BF390EC00B010DC /* LaunchScreen.swift */,
 			);
-			path = IntialLaunchScreen;
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 		A89095B62BF3906D00B010DC /* Home */ = {
@@ -247,6 +247,14 @@
 				A89095E32BF4C0E700B010DC /* CartView.swift */,
 			);
 			path = Cart;
+			sourceTree = "<group>";
+		};
+		A89095E52BF4C20000B010DC /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				A890959E2BF364E000B010DC /* ContentView.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
