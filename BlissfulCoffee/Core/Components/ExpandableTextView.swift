@@ -44,7 +44,7 @@ struct ExpandableTextView: View {
                                            }
                                        })
                                }
-                               .frame(height: .greatestFiniteMagnitude)
+                               .frame(height: 200)
                            })
                            .hidden()
                )
@@ -59,6 +59,7 @@ struct ExpandableTextView: View {
                    })
                }
            }
+           .font(.custom("Sora-Regular", size: 16))
        }
    }
 

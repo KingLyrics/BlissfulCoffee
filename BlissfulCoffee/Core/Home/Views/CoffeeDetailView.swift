@@ -19,6 +19,7 @@ struct CoffeeDetailView: View {
                         .scaledToFit()
                         .clipShape(RoundedRectangle(cornerRadius: 16))
                         .frame(width: 327, height: 202)
+                        .padding(.leading, 10)
                     
                     
                     VStack(alignment: .leading , spacing: -5){
@@ -64,8 +65,10 @@ struct CoffeeDetailView: View {
                         }
                         .padding(.top)
                         
+                        
+                        
                     }
-                    .padding(.horizontal,15)
+                    .padding(.horizontal,20)
                 }
             }
             
