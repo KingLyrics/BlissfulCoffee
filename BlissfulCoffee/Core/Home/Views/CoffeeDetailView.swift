@@ -57,7 +57,7 @@ struct CoffeeDetailView: View {
                         Divider()
                             .frame(width: 300, height: 20)
                         
-                        VStack(alignment: .leading) {
+                        VStack(alignment: .leading , spacing: 10) {
                             Text("Description")
                                 .font(.custom("Sora-SemiBold", size: 16))
                             ExpandableTextView(text: coffee.description, linelimit: 2)
@@ -65,8 +65,11 @@ struct CoffeeDetailView: View {
                         }
                         .padding(.top)
                         
-                        
-                        
+                        VStack{
+                            Text("Size")
+                                .font(.custom("Sora-SemiBold", size: 16))
+                        }
+                        .padding(.top,20)
                     }
                     .padding(.horizontal,20)
                 }

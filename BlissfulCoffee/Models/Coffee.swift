@@ -15,7 +15,7 @@ struct Coffee: Hashable{
     let rating:Double
     let noOfComments:Int
     let description:String
-    let sizes:[String]
+    let sizes:[Sizes]
     let image:ImageResource
     var isFavorite:Bool = false
     

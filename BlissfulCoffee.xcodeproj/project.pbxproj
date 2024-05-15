@@ -33,6 +33,7 @@
 		A89095E42BF4C0E700B010DC /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095E32BF4C0E700B010DC /* CartView.swift */; };
 		A89095E72BF4CA9400B010DC /* IconBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095E62BF4CA9400B010DC /* IconBackground.swift */; };
 		A89095E92BF4CE3000B010DC /* ExpandableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095E82BF4CE3000B010DC /* ExpandableTextView.swift */; };
+		A89095EB2BF4D5B200B010DC /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095EA2BF4D5B200B010DC /* Sizes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		A89095E32BF4C0E700B010DC /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		A89095E62BF4CA9400B010DC /* IconBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBackground.swift; sourceTree = "<group>"; };
 		A89095E82BF4CE3000B010DC /* ExpandableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTextView.swift; sourceTree = "<group>"; };
+		A89095EA2BF4D5B200B010DC /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			children = (
 				A89095C52BF3B04D00B010DC /* CoffeTypes.swift */,
 				A89095C72BF3B59000B010DC /* Coffee.swift */,
+				A89095EA2BF4D5B200B010DC /* Sizes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				A89095C82BF3B59000B010DC /* Coffee.swift in Sources */,
 				A890959F2BF364E000B010DC /* ContentView.swift in Sources */,
 				A89095DB2BF3D5A500B010DC /* CoffeeDetailView.swift in Sources */,
+				A89095EB2BF4D5B200B010DC /* Sizes.swift in Sources */,
 				A890959D2BF364E000B010DC /* BlissfulCoffeeApp.swift in Sources */,
 				A89095E92BF4CE3000B010DC /* ExpandableTextView.swift in Sources */,
 				A89095C02BF39F2400B010DC /* SearchBar.swift in Sources */,
