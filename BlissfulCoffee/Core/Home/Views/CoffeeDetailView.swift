@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct CoffeeDetailView: View {
+    @State private var selectedCoffeeSize:Sizes = .Medium
     let coffee:Coffee
+   
+    
+    private let flexibleColumn = [
+        GridItem(.flexible(), spacing: 50),
+        GridItem(.flexible(), spacing: 40),
+    ]
     
     var body: some View {
         NavigationStack{
@@ -16,10 +23,11 @@ struct CoffeeDetailView: View {
                 VStack(alignment:.leading){
                     Image(coffee.image)
                         .resizable()
-                        .scaledToFit()
-                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                        
+                        .scaledToFill()
                         .frame(width: 327, height: 202)
-                        .padding(.leading, 10)
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                        
                     
                     
                     VStack(alignment: .leading , spacing: -5){
@@ -32,15 +40,15 @@ struct CoffeeDetailView: View {
                                 .foregroundStyle(.gray)
                             
                             HStack(spacing:15){
-                               IconBackground(imageName: "bicycle")
+                                IconBackground(imageName: "bicycle")
                                 IconBackground(imageName: "cup.and.saucer")
                                 IconBackground(imageName: "takeoutbag.and.cup.and.straw")
                             }
-                            .offset(x:55,y:10)
+                            .offset(x:67,y:10)
                             
                             
                         }
-                    
+                        
                         HStack{
                             Image(.star)
                                 .resizable()
@@ -54,6 +62,7 @@ struct CoffeeDetailView: View {
                         }
                         .padding(.vertical,20)
                         
+                        
                         Divider()
                             .frame(width: 300, height: 20)
                         
@@ -61,34 +70,64 @@ struct CoffeeDetailView: View {
                             Text("Description")
                                 .font(.custom("Sora-SemiBold", size: 16))
                             ExpandableTextView(text: coffee.description, linelimit: 2)
-                                
+                            
                         }
                         .padding(.top)
                         
-                        VStack{
+                        VStack(alignment:.leading, spacing: 30){
                             Text("Size")
                                 .font(.custom("Sora-SemiBold", size: 16))
+                                .padding(.top, 20)
+                            
+                            LazyHGrid(rows: [GridItem(.flexible(minimum: 0))], spacing: 30, content: {
+                                ForEach(coffee.sizes){ size in
+                                    SizeCells(isSelected: size == selectedCoffeeSize, sizeName:size.rawValue)
+                                        .onTapGesture{
+                                            selectedCoffeeSize = size
+                                        }
+                                }
+                                
+                            })
+                            
+                            
                         }
-                        .padding(.top,20)
                     }
-                    .padding(.horizontal,20)
+                    
+                    
+                    
+                    
+                    
+                    
                 }
+                .padding(.leading, 9)
+                
+            }
+
+        }
+        
+        .safeAreaInset(edge: .bottom) {
+            VStack{
+                Text("Price")
+                    .frame(maxWidth: .infinity)
+                    .background(.red)
+                
             }
             
-            .navigationTitle("Detail")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar{
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {}, label: {
-                        Image(systemName: "heart")
-                            .foregroundStyle(.ashBlack)
-                    })
-                }
-            }
-            .padding()
         }
+        .navigationTitle("Detail")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar{
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(action: {}, label: {
+                    Image(systemName: "heart")
+                        .foregroundStyle(.ashBlack)
+                })
+            }
+        }
+        .padding()
     }
 }
+
 
 #Preview {
     CoffeeDetailView(coffee: DeveloperPreview().coffees[3])

@@ -7,8 +7,15 @@
 
 import Foundation
 
-enum Sizes:String, CaseIterable {
+enum Sizes:String, CaseIterable, Identifiable {
+    
     case Small = "S"
     case Medium = "M"
     case Large = "L"
+    
+    
+    var id:String{
+        self.rawValue
+    }
 }
+

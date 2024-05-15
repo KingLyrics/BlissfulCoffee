@@ -34,6 +34,7 @@
 		A89095E72BF4CA9400B010DC /* IconBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095E62BF4CA9400B010DC /* IconBackground.swift */; };
 		A89095E92BF4CE3000B010DC /* ExpandableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095E82BF4CE3000B010DC /* ExpandableTextView.swift */; };
 		A89095EB2BF4D5B200B010DC /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095EA2BF4D5B200B010DC /* Sizes.swift */; };
+		A89095ED2BF4DF7400B010DC /* SizeCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095EC2BF4DF7400B010DC /* SizeCells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		A89095E62BF4CA9400B010DC /* IconBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBackground.swift; sourceTree = "<group>"; };
 		A89095E82BF4CE3000B010DC /* ExpandableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTextView.swift; sourceTree = "<group>"; };
 		A89095EA2BF4D5B200B010DC /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
+		A89095EC2BF4DF7400B010DC /* SizeCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				A89095C32BF3ABD000B010DC /* CategoryCells.swift */,
 				A89095E62BF4CA9400B010DC /* IconBackground.swift */,
 				A89095E82BF4CE3000B010DC /* ExpandableTextView.swift */,
+				A89095EC2BF4DF7400B010DC /* SizeCells.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			files = (
 				A89095BE2BF39B9200B010DC /* HeaderView.swift in Sources */,
 				A89095BA2BF390EC00B010DC /* LaunchScreen.swift in Sources */,
+				A89095ED2BF4DF7400B010DC /* SizeCells.swift in Sources */,
 				A89095C42BF3ABD000B010DC /* CategoryCells.swift in Sources */,
 				A89095E42BF4C0E700B010DC /* CartView.swift in Sources */,
 				A89095DE2BF4BF8A00B010DC /* MainTabBar.swift in Sources */,
