@@ -31,6 +31,8 @@
 		A89095DE2BF4BF8A00B010DC /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095DD2BF4BF8A00B010DC /* MainTabBar.swift */; };
 		A89095E12BF4C0A300B010DC /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095E02BF4C0A300B010DC /* FavoriteView.swift */; };
 		A89095E42BF4C0E700B010DC /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095E32BF4C0E700B010DC /* CartView.swift */; };
+		A89095E72BF4CA9400B010DC /* IconBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095E62BF4CA9400B010DC /* IconBackground.swift */; };
+		A89095E92BF4CE3000B010DC /* ExpandableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095E82BF4CE3000B010DC /* ExpandableTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		A89095DD2BF4BF8A00B010DC /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		A89095E02BF4C0A300B010DC /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		A89095E32BF4C0E700B010DC /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		A89095E62BF4CA9400B010DC /* IconBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBackground.swift; sourceTree = "<group>"; };
+		A89095E82BF4CE3000B010DC /* ExpandableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				A89095C32BF3ABD000B010DC /* CategoryCells.swift */,
+				A89095E62BF4CA9400B010DC /* IconBackground.swift */,
+				A89095E82BF4CE3000B010DC /* ExpandableTextView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -342,12 +348,14 @@
 				A89095CA2BF3B6CF00B010DC /* DeveloperPreview.swift in Sources */,
 				A89095CC2BF3BA4100B010DC /* CoffeeCardView.swift in Sources */,
 				A89095E12BF4C0A300B010DC /* FavoriteView.swift in Sources */,
+				A89095E72BF4CA9400B010DC /* IconBackground.swift in Sources */,
 				A89095D52BF3C84700B010DC /* HomeViewModel.swift in Sources */,
 				A89095D82BF3C89F00B010DC /* HomeService.swift in Sources */,
 				A89095C82BF3B59000B010DC /* Coffee.swift in Sources */,
 				A890959F2BF364E000B010DC /* ContentView.swift in Sources */,
 				A89095DB2BF3D5A500B010DC /* CoffeeDetailView.swift in Sources */,
 				A890959D2BF364E000B010DC /* BlissfulCoffeeApp.swift in Sources */,
+				A89095E92BF4CE3000B010DC /* ExpandableTextView.swift in Sources */,
 				A89095C02BF39F2400B010DC /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
