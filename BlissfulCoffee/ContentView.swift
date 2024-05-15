@@ -14,7 +14,7 @@ struct ContentView: View {
             if isFirstLaunch{
                 LaunchScreen(isFirstLaunch: $isFirstLaunch)
             }else{
-                    HomeView()
+                    MainTabBar()
             }
         }
     }

@@ -28,6 +28,9 @@
 		A89095D52BF3C84700B010DC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095D42BF3C84700B010DC /* HomeViewModel.swift */; };
 		A89095D82BF3C89F00B010DC /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095D72BF3C89F00B010DC /* HomeService.swift */; };
 		A89095DB2BF3D5A500B010DC /* CoffeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095DA2BF3D5A500B010DC /* CoffeeDetailView.swift */; };
+		A89095DE2BF4BF8A00B010DC /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095DD2BF4BF8A00B010DC /* MainTabBar.swift */; };
+		A89095E12BF4C0A300B010DC /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095E02BF4C0A300B010DC /* FavoriteView.swift */; };
+		A89095E42BF4C0E700B010DC /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89095E32BF4C0E700B010DC /* CartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		A89095D42BF3C84700B010DC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A89095D72BF3C89F00B010DC /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		A89095DA2BF3D5A500B010DC /* CoffeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailView.swift; sourceTree = "<group>"; };
+		A89095DD2BF4BF8A00B010DC /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		A89095E02BF4C0A300B010DC /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		A89095E32BF4C0E700B010DC /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,9 +146,12 @@
 		A89095B12BF3871700B010DC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A89095E22BF4C0DC00B010DC /* Cart */,
 				A89095B42BF387B000B010DC /* Components */,
+				A89095DF2BF4C07F00B010DC /* Favorite */,
 				A89095B62BF3906D00B010DC /* Home */,
 				A89095B52BF387C600B010DC /* IntialLaunchScreen */,
+				A89095DC2BF4BF7C00B010DC /* TabBar */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -214,6 +223,30 @@
 				A89095DA2BF3D5A500B010DC /* CoffeeDetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A89095DC2BF4BF7C00B010DC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A89095DD2BF4BF8A00B010DC /* MainTabBar.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		A89095DF2BF4C07F00B010DC /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				A89095E02BF4C0A300B010DC /* FavoriteView.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		A89095E22BF4C0DC00B010DC /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				A89095E32BF4C0E700B010DC /* CartView.swift */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,10 +327,13 @@
 				A89095BE2BF39B9200B010DC /* HeaderView.swift in Sources */,
 				A89095BA2BF390EC00B010DC /* LaunchScreen.swift in Sources */,
 				A89095C42BF3ABD000B010DC /* CategoryCells.swift in Sources */,
+				A89095E42BF4C0E700B010DC /* CartView.swift in Sources */,
+				A89095DE2BF4BF8A00B010DC /* MainTabBar.swift in Sources */,
 				A89095C62BF3B04D00B010DC /* CoffeTypes.swift in Sources */,
 				A89095B82BF3907700B010DC /* HomeView.swift in Sources */,
 				A89095CA2BF3B6CF00B010DC /* DeveloperPreview.swift in Sources */,
 				A89095CC2BF3BA4100B010DC /* CoffeeCardView.swift in Sources */,
+				A89095E12BF4C0A300B010DC /* FavoriteView.swift in Sources */,
 				A89095D52BF3C84700B010DC /* HomeViewModel.swift in Sources */,
 				A89095D82BF3C89F00B010DC /* HomeService.swift in Sources */,
 				A89095C82BF3B59000B010DC /* Coffee.swift in Sources */,
