@@ -10,10 +10,11 @@ struct HomeView: View {
     ]
     
     var body: some View {
-        NavigationStack {
+        
             VStack {
+                NavigationStack {
                 HeaderView()
-                
+               
                 ScrollView {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 22) {
@@ -41,10 +42,9 @@ struct HomeView: View {
                     }
                     .padding()
                 }
-                
+                .padding()
                 Spacer()
             }
-            .padding()
         }
     }
 }

@@ -17,6 +17,7 @@ struct Coffee: Hashable{
     let description:String
     let sizes:[String]
     let image:ImageResource
+    var isFavorite:Bool = false
     
   
 }
