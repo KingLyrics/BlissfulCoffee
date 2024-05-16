@@ -21,7 +21,6 @@ struct CoffeeDetailView: View {
                 VStack(alignment:.leading){
                     Image(coffee.image)
                         .resizable()
-                    
                         .scaledToFill()
                         .frame(width: 327, height: 202)
                         .clipShape(RoundedRectangle(cornerRadius: 16))
@@ -43,7 +42,6 @@ struct CoffeeDetailView: View {
                             //                                IconBackground(imageName: "takeoutbag.and.cup.and.straw")
                             //                            }
                             //                            .offset(x:67,y:10)
-                            
                             
                         }
                         
@@ -92,10 +90,7 @@ struct CoffeeDetailView: View {
                         }
                         .padding(.bottom, 50)
                     }
-                    
-                
-                    
-            }
+                }
                 .padding(.leading, 9)
                 
             }
