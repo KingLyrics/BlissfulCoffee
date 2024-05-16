@@ -10,10 +10,10 @@ import SwiftUI
 struct CoffeeDetailView: View {
     @State private var selectedCoffeeSize:Sizes = .Medium
     @State private var isFavorite:Bool = false
+    @State private var showingAlert:Bool = false
+    @State private var alertMessage:String = ""
+    
     let coffee:Coffee
-    
-    
-    
     
     var body: some View {
         NavigationStack{
@@ -93,25 +93,30 @@ struct CoffeeDetailView: View {
                         .padding(.bottom, 50)
                     }
                     
+                
                     
-                    
-                    
-                    
-                    
-                }
+            }
                 .padding(.leading, 9)
                 
             }
             .navigationTitle("Detail")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar{
-                ToolbarItem(placement: .topBarTrailing) {
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         isFavorite.toggle()
-                    }, label: {
+                        alertMessage = isFavorite ? "\(coffee.title) has been added to your favorites." : "\(coffee.title) has been removed from your favorites."
+                        showingAlert = true
+                    }) {
                         Image(systemName: isFavorite ? "heart.fill" : "heart")
-                            .foregroundStyle(.ashBlack)
-                    })
+                            .foregroundColor(.ashBlack)
+                    }
+                    .alert(isPresented: $showingAlert) {
+                        Alert(
+                            title: Text(alertMessage),
+                            dismissButton: .default(Text("OK"))
+                        )
+                    }
                 }
             }
             
@@ -135,10 +140,10 @@ struct CoffeeDetailView: View {
                             .background(.darkBrown)
                             .clipShape(RoundedRectangle(cornerRadius: 16))
                     }
-                  
+                    
                 }
-              
-               
+                
+                
                 
                 
                 

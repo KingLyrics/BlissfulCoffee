@@ -55,7 +55,7 @@ struct ExpandableTextView: View {
                        }
                    }, label: {
                        Text(readMoreText)
-                           .font(.custom("Sora-SemiBold", size: 16))
+                           .font(.custom("Sora-Regular", size: 14))
                    })
                }
            }
