@@ -9,10 +9,11 @@ import SwiftUI
 
 struct OrderPageView: View {
     
+    let coffee:Coffee
     
     var body: some View {
         NavigationStack{
-            VStack{
+            VStack(alignment:.leading){
                 HStack(spacing:50){
                     Text("Deliver")
                         .foregroundStyle( .offWhite)
@@ -28,11 +29,26 @@ struct OrderPageView: View {
                 .padding(.vertical,3)
                 .background(.offGray)
                 .clipShape(RoundedRectangle(cornerRadius: 12))
+                
+                
+                VStack(alignment:.leading, spacing: 8){
+                    Text("Delivery Address")
+                        .font(.custom("Sora-SemiBold", size: 16))
+                    
+                    VStack(alignment:.leading, spacing: 7){
+                        Text("Bole Woreda 23")
+                            .font(.custom("Sora-SemiBold", size: 14))
+                        
+                        Text("Kasanchis Business District, Addis Ababa, Ethiopia")
+                            .font(.custom("Sora-Regular", size: 12))
+                            .foregroundStyle(.gray)
+                    }
+                }
                 .padding(.top)
-
                 
                 Spacer()
             }
+            .padding()
             .navigationTitle("Order")
             .navigationBarTitleDisplayMode(.inline)
             
@@ -42,5 +58,5 @@ struct OrderPageView: View {
 }
 
 #Preview {
-    OrderPageView()
+    OrderPageView(coffee: DeveloperPreview().coffees[0])
 }

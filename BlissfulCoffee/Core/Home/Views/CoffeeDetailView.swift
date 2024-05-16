@@ -132,7 +132,7 @@ struct CoffeeDetailView: View {
                         
                     }
                     
-                    NavigationLink(destination: OrderPageView()) {
+                    NavigationLink(destination: OrderPageView(coffee: coffee)) {
                         Text("Buy Now")
                             .font(.custom("Sora-SemiBold", size: 16))
                             .foregroundColor(.white)

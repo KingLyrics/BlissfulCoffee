@@ -10,7 +10,6 @@ struct HomeView: View {
     ]
     
     var body: some View {
-        
             VStack {
                 NavigationStack {
                 HeaderView()
@@ -36,7 +35,6 @@ struct HomeView: View {
                                 CoffeeCardView(coffee: coffee)
                             }
                             .buttonStyle(PlainButtonStyle())
-
                         }
                     }
                     .padding()
