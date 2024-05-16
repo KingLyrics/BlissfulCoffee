@@ -14,7 +14,6 @@ struct HomeView: View {
             VStack {
                 NavigationStack {
                 HeaderView()
-               
                 ScrollView {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 22) {

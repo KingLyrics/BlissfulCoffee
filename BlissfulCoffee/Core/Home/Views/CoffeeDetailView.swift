@@ -11,7 +11,7 @@ struct CoffeeDetailView: View {
     @State private var selectedCoffeeSize:Sizes = .Medium
     @State private var isFavorite:Bool = false
     let coffee:Coffee
-   
+    
     
     
     
@@ -21,11 +21,11 @@ struct CoffeeDetailView: View {
                 VStack(alignment:.leading){
                     Image(coffee.image)
                         .resizable()
-                        
+                    
                         .scaledToFill()
                         .frame(width: 327, height: 202)
                         .clipShape(RoundedRectangle(cornerRadius: 16))
-                        
+                    
                     
                     
                     VStack(alignment: .leading , spacing: 5){
@@ -37,12 +37,12 @@ struct CoffeeDetailView: View {
                                 .font(.custom("Sora-Regular", size: 15))
                                 .foregroundStyle(.gray)
                             
-//                            HStack(spacing:15){
-//                                IconBackground(imageName: "bicycle")
-//                                IconBackground(imageName: "cup.and.saucer")
-//                                IconBackground(imageName: "takeoutbag.and.cup.and.straw")
-//                            }
-//                            .offset(x:67,y:10)
+                            //                            HStack(spacing:15){
+                            //                                IconBackground(imageName: "bicycle")
+                            //                                IconBackground(imageName: "cup.and.saucer")
+                            //                                IconBackground(imageName: "takeoutbag.and.cup.and.straw")
+                            //                            }
+                            //                            .offset(x:67,y:10)
                             
                             
                         }
@@ -87,10 +87,10 @@ struct CoffeeDetailView: View {
                                 
                             })
                             
-                           
-                    
+                            
+                            
                         }
-                        .padding(.bottom, 60)
+                        .padding(.bottom, 50)
                     }
                     
                     
@@ -114,41 +114,43 @@ struct CoffeeDetailView: View {
                     })
                 }
             }
-
-        }
-        
-        .safeAreaInset(edge: .bottom) {
-            HStack(spacing: 50){
-                VStack(alignment:.leading, spacing:5){
-                    Text("Price")
-                        .font(.custom("Sora-Regular", size: 14))
-                        .foregroundStyle(.gray)
-                    Text("$ \(String(format: "%.2f", coffee.price))")
-                        .font(.custom("Sora-SemiBold", size: 18))
-                        .foregroundStyle(.darkBrown)
+            
+            .safeAreaInset(edge: .bottom) {
+                HStack(spacing: 50){
+                    VStack(alignment:.leading, spacing:5){
+                        Text("Price")
+                            .font(.custom("Sora-Regular", size: 14))
+                            .foregroundStyle(.gray)
+                        Text("$ \(String(format: "%.2f", coffee.price))")
+                            .font(.custom("Sora-SemiBold", size: 18))
+                            .foregroundStyle(.darkBrown)
+                        
+                    }
                     
+                    NavigationLink(destination: OrderPageView()) {
+                        Text("Buy Now")
+                            .font(.custom("Sora-SemiBold", size: 16))
+                            .foregroundColor(.white)
+                            .frame(width: 217, height: 56)
+                            .background(.darkBrown)
+                            .clipShape(RoundedRectangle(cornerRadius: 16))
+                    }
+                  
                 }
+              
+               
                 
-                Button(action: {}, label: {
-                    Text("Buy Now")
-                        .font(.custom("Sora-SemiBold", size: 16))
-                        .foregroundStyle(.offWhite)
-                        .frame(width: 217, height: 56)
-                        .background(.darkBrown)
-                        .clipShape(RoundedRectangle(cornerRadius: 16))
-                })
                 
                 
             }
             .ignoresSafeArea(edges:.bottom)
-            .background(ignoresSafeAreaEdges: .horizontal)
             .frame(maxWidth: .greatestFiniteMagnitude)
-          
-           
-
+            
+            
+            
             
         }
-      
+        
         
         .padding()
     }
