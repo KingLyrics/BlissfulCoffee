@@ -12,18 +12,18 @@ struct OrderPageView: View {
     @State private var itemCount:Int = 1
     let coffee:Coffee
     let maxLengthOfCharacters = 7
-
+    
     var coffeeName: String
-
-       init(coffee: Coffee) {
-           self.coffee = coffee
-           self.coffeeName = coffee.title
-       }
+    
+    init(coffee: Coffee) {
+        self.coffee = coffee
+        self.coffeeName = coffee.title
+    }
     
     
     var body: some View {
         let truncatedText = coffeeName.prefix(min(coffeeName.count, maxLengthOfCharacters))
-
+        
         NavigationStack{
             VStack(alignment:.leading){
                 HStack(spacing:50){
@@ -84,10 +84,9 @@ struct OrderPageView: View {
                         .padding(.vertical)
                         
                         Divider()
-                            .frame(width: 300)
+                            .frame(height:1)
                         
-                        
-                        HStack(spacing:90){
+                        HStack(spacing:80){
                             HStack{
                                 Image(coffee.image)
                                     .resizable()
@@ -97,7 +96,7 @@ struct OrderPageView: View {
                                 
                                 VStack(alignment:.leading){
                                     Text(truncatedText + (coffeeName.count > maxLengthOfCharacters ? "..." : ""))
-
+                                    
                                         .font(.custom("Sora-SemiBold", size: 16))
                                     Text("\(coffee.coffeType.rawValue.capitalized)")
                                         .font(.custom("Sora-Regular", size: 12))
@@ -105,9 +104,9 @@ struct OrderPageView: View {
                                     
                                 }
                             }
-                       
-            
-                           
+                            
+                            
+                            
                             HStack(spacing:10){
                                 Button(action: {
                                     itemCount -= 1
@@ -118,6 +117,10 @@ struct OrderPageView: View {
                                     
                                 }, label: {
                                     Image(systemName: "minus")
+                                        .foregroundStyle(.ashBlack)
+                                        .frame(width: 24, height: 24)
+                                        .background(.offWhite)
+                                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                                 })
                                 
                                 Text("\(itemCount)")
@@ -127,10 +130,17 @@ struct OrderPageView: View {
                                     itemCount += 1
                                 }, label: {
                                     Image(systemName: "plus")
+                                        .foregroundStyle(.ashBlack)
+                                        .frame(width: 24, height: 24)
+                                        .background(.offWhite)
+                                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                                 })
                             }
                         }
                         
+                        Divider()
+                            .frame(height:1)
+                            .background(.darkBrown)
                         
                     }
                     
@@ -139,14 +149,23 @@ struct OrderPageView: View {
                 .padding(.top)
                 
                 Spacer()
+                
+                VStack {
+                    Text("Order")
+                  
+                }
+                .frame(maxWidth: .infinity)
+                
+                
             }
-            .padding()
-            .navigationTitle("Order")
-            .navigationBarTitleDisplayMode(.inline)
             
         }
+        .padding(.horizontal, 30)
+        .navigationTitle("Order")
+        .navigationBarTitleDisplayMode(.inline)
         
     }
+    
 }
 
 #Preview {
