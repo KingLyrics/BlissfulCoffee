@@ -23,7 +23,6 @@ class DeveloperPreview{
         Coffee(title: "Mocha", coffeType: .mocha, price: 4.59, rating: 4.8, noOfComments: 210, description: "Our Mocha blends the rich flavors of espresso, steamed milk, and chocolate syrup, topped with whipped cream. It's a luxurious treat that combines the best of coffee and chocolate. Available in small, medium, and large sizes.", sizes: [.Small, .Medium, .Large], image: .coffee3, hasDiscount: true, discountAmount: 2.33),
         
         Coffee(title: "Flat White", coffeType: .flatWhite, price: 3.79, rating: 4.7, noOfComments: 175, description: "The Flat White is a velvety smooth coffee made with a shot of espresso and steamed milk, offering a creamy texture and strong coffee flavor. It's a favorite among those who enjoy a balanced coffee-to-milk ratio. Available in small and medium sizes.", sizes: [.Small, .Medium, .Large], image: .coffee1, hasDiscount: false     ),
-        
         Coffee(title: "Espresso",
                coffeType: .espresso,
                price: 2.50,

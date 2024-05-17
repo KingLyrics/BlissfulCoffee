@@ -139,8 +139,13 @@ struct OrderPageView: View {
                         }
                         
                         Divider()
-                            .frame(height:1)
                             .background(.darkBrown)
+                        
+                        if coffee.hasDiscount{
+                           DiscountCardView()
+                                .padding(.top)
+                        }
+                        
                         
                     }
                     
@@ -169,5 +174,5 @@ struct OrderPageView: View {
 }
 
 #Preview {
-    OrderPageView(coffee: DeveloperPreview().coffees[4])
+    OrderPageView(coffee: DeveloperPreview().coffees[1])
 }
