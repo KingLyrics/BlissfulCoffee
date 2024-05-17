@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PaymentOptions:String, CaseIterable{
+enum PaymentOptions:String,CaseIterable{
     case cash = "Cash/Wallet"
     case bankTransfer = "Bank Transfer"
     case onDelivery = "On Delivery Payment"

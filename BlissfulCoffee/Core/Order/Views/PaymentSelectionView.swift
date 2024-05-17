@@ -8,28 +8,54 @@
 import SwiftUI
 
 struct PaymentSelectionView: View {
-    let paymentOption:PaymentOptions
-    var walletAmount: Double? = 20.00 // Optional wallet amount
+    @Environment(\.dismiss) var dismiss
+    @Binding var selectedPaymentOption:PaymentOptions
+    var walletAmount: Double? = 20.00
+    let paymentTypes:[PaymentOptions] = PaymentOptions.allCases
+    
     
     var body: some View {
-        HStack(spacing: 10){
-            Image(systemName: paymentOption.imageName)
-            VStack(alignment:.leading, spacing: 5){
-                Text(paymentOption.rawValue)
-                if let walletAmount = walletAmount, paymentOption == .cash {
-                    Text("$\(String(format: "%.2f", walletAmount))")
-                        .font(.custom("Sora-SemiBold", size: 12))
-                }           
+        NavigationStack{
+            List(paymentTypes, id:\.self){paymentOption in
+                Button(action: {
+                    selectedPaymentOption = paymentOption
+                    dismiss()
+                }) {
+                    HStack{
+                        Image(systemName: paymentOption.imageName)
+                        Text(paymentOption.rawValue)
+                            .font(.custom("Sora-SemiBold", size: 18))
+                            .foregroundStyle(.ashBlack)
+                        Spacer()
+                       
+                        if paymentOption == .cash{
+                            Text("$\(String(format: "%.2f", walletAmount ?? 0))")
+                        }
+                        
+                    }
+                    .foregroundStyle(.darkBrown)
+                    .padding(.vertical, 10)
+                    
+                }
             }
-            .font(.custom("Sora-SemiBold", size: 14))
+            .listStyle(.plain)
+            .navigationTitle("Payement Methods")
+            .navigationBarTitleDisplayMode(.large)
+            .toolbar{
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Return"){
+                        dismiss()
+                    }
+                }
+            
+                
+            }
+            
         }
     }
 }
 
 
 #Preview {
-    VStack{
-        PaymentSelectionView(paymentOption: .cash)
-        PaymentSelectionView(paymentOption: .onDelivery)
-    }
+    PaymentSelectionView(selectedPaymentOption: .constant(.cash))
 }

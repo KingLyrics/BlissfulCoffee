@@ -25,9 +25,6 @@ struct OrderPageView: View {
     
     var coffeeName: String
 
-
-    
-    
     
     var body: some View {
         let truncatedText = coffeeName.prefix(min(coffeeName.count, maxLengthOfCharacters))
@@ -197,8 +194,11 @@ struct OrderPageView: View {
                                     Text("Selected Payment Method: \(selectedPaymentOption.rawValue)")
                                         .font(.custom("Sora-SemiBold", size: 15))
                                     
-                                    Button("Choose Payment Options"){
-                                        
+                                    Button("Select Payment Option"){
+                                        isSheetPresented = true
+                                    }
+                                    .sheet(isPresented: $isSheetPresented) {
+                                        PaymentSelectionView(selectedPaymentOption: $selectedPaymentOption )
                                     }
                                     
                                 }
