@@ -88,7 +88,7 @@ struct OrderPageView: View {
                         Divider()
                             .frame(height:1)
                         
-                        HStack(spacing:120){
+                        HStack{
                             HStack{
                                 Image(coffee.image)
                                     .resizable()
@@ -106,7 +106,7 @@ struct OrderPageView: View {
                                 }
                             }
                             
-                            
+                            Spacer()
                             
                             HStack(spacing:10){
                                 Button(action: {
@@ -157,7 +157,7 @@ struct OrderPageView: View {
                                         .font(.custom("Sora-Regular", size: 14))
                                         .foregroundStyle(.ashBlack)
                                     Spacer()
-                                    Text("$\(String(format: "%.2f", coffee.price))")
+                                    Text("$\(String(format: "%.2f", Double(itemCount) * coffee.price))")
                                         .font(.custom("Sora-SemiBold", size: 14))
                                     
                                 }
@@ -175,6 +175,14 @@ struct OrderPageView: View {
                                     
                                     Text("$\(String(format: "%.2f", deliveryFee))")
                                         .font(.custom("Sora-SemiBold", size: 14))
+                                    
+                                }
+                                
+                                HStack{
+                                    Text("Total")
+                                        .font(.custom("Sora-Bold", size: 16))
+                                    
+                                    
                                 }
                             }
                             .padding(.top)

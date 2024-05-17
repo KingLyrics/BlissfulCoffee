@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A8707D5B2BF73E4000C8C6CE /* DiscountCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8707D5A2BF73E4000C8C6CE /* DiscountCardView.swift */; };
+		A8707D5E2BF753B900C8C6CE /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8707D5D2BF753B900C8C6CE /* OrderViewModel.swift */; };
 		A8716BCF2BF5D1D20094CC20 /* OrderPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8716BCE2BF5D1D20094CC20 /* OrderPageView.swift */; };
 		A890959D2BF364E000B010DC /* BlissfulCoffeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890959C2BF364E000B010DC /* BlissfulCoffeeApp.swift */; };
 		A890959F2BF364E000B010DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890959E2BF364E000B010DC /* ContentView.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		A8707D5A2BF73E4000C8C6CE /* DiscountCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCardView.swift; sourceTree = "<group>"; };
+		A8707D5D2BF753B900C8C6CE /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		A8716BCE2BF5D1D20094CC20 /* OrderPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPageView.swift; sourceTree = "<group>"; };
 		A89095992BF364E000B010DC /* BlissfulCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlissfulCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A890959C2BF364E000B010DC /* BlissfulCoffeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlissfulCoffeeApp.swift; sourceTree = "<group>"; };
@@ -85,9 +87,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8707D5C2BF753AA00C8C6CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A8707D5D2BF753B900C8C6CE /* OrderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		A8716BCD2BF5D1BC0094CC20 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				A8707D5C2BF753AA00C8C6CE /* ViewModel */,
 				A8716BCE2BF5D1D20094CC20 /* OrderPageView.swift */,
 				A8707D5A2BF73E4000C8C6CE /* DiscountCardView.swift */,
 			);
@@ -373,6 +384,7 @@
 				A89095E12BF4C0A300B010DC /* FavoriteView.swift in Sources */,
 				A89095E72BF4CA9400B010DC /* IconBackground.swift in Sources */,
 				A89095D52BF3C84700B010DC /* HomeViewModel.swift in Sources */,
+				A8707D5E2BF753B900C8C6CE /* OrderViewModel.swift in Sources */,
 				A89095D82BF3C89F00B010DC /* HomeService.swift in Sources */,
 				A89095C82BF3B59000B010DC /* Coffee.swift in Sources */,
 				A890959F2BF364E000B010DC /* ContentView.swift in Sources */,
