@@ -8,13 +8,13 @@
 import Foundation
 
 enum PaymentOptions:String,CaseIterable{
-    case cash = "Cash/Wallet"
+    case wallet = "Wallet"
     case bankTransfer = "Bank Transfer"
     case onDelivery = "On Delivery Payment"
     
     var initialValue:Double{
         switch self{
-        case .cash:
+        case .wallet:
             return 20.0
         default:
             return 0
@@ -24,7 +24,7 @@ enum PaymentOptions:String,CaseIterable{
     
     var imageName:String{
         switch self {
-        case .cash:
+        case .wallet:
             return "banknote.fill"
         case .bankTransfer:
             return "arrowshape.turn.up.forward.circle.fill"

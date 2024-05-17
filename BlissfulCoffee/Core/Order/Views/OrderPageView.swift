@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OrderPageView: View {
     @ObservedObject private var viewModel:OrderViewModel
-    @State private var selectedPaymentOption:PaymentOptions = .cash
+    @State private var selectedPaymentOption:PaymentOptions = .wallet
     @State private var isSheetPresented = false
 
     
@@ -216,16 +216,28 @@ struct OrderPageView: View {
                 
                 Spacer()
                 
-                VStack {
-                    Text("Order")
+                HStack {
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Order")
+                            .font(.custom("Sora-SemiBold", size: 16))
+                            .foregroundColor(.white)
+                            .frame(width: 300, height: 56)
+                            .background(.darkBrown)
+                            .clipShape(RoundedRectangle(cornerRadius: 16))
+                            .padding(.leading, 8)
+
+                    })
                     
                 }
-                .frame(maxWidth: .infinity)
+              
                 
                 
             }
             
         }
+        .padding(.top,5)
         .padding(.horizontal,40)
         .navigationTitle("Order")
         .navigationBarTitleDisplayMode(.inline)

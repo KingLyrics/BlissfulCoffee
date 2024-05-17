@@ -28,7 +28,7 @@ struct PaymentSelectionView: View {
                             .foregroundStyle(.ashBlack)
                         Spacer()
                        
-                        if paymentOption == .cash{
+                        if paymentOption == .wallet{
                             Text("$\(String(format: "%.2f", walletAmount ?? 0))")
                         }
                         
@@ -57,5 +57,5 @@ struct PaymentSelectionView: View {
 
 
 #Preview {
-    PaymentSelectionView(selectedPaymentOption: .constant(.cash))
+    PaymentSelectionView(selectedPaymentOption: .constant(.wallet))
 }
