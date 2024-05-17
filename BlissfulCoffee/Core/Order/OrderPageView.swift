@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct OrderPageView: View {
-    
+    @State private var previousDeliveryFee:Double = 2.0
+    @State private var deliveryFee:Double = 1.0
     @State private var itemCount:Int = 1
+    
     let coffee:Coffee
     let maxLengthOfCharacters = 5
     
@@ -19,6 +21,7 @@ struct OrderPageView: View {
         self.coffee = coffee
         self.coffeeName = coffee.title
     }
+    
     
     
     var body: some View {
@@ -79,7 +82,6 @@ struct OrderPageView: View {
                                     .stroke(Color.gray)
                             }
                             
-                            
                         }
                         .padding(.vertical)
                         
@@ -96,7 +98,6 @@ struct OrderPageView: View {
                                 
                                 VStack(alignment:.leading){
                                     Text(truncatedText + (coffeeName.count > maxLengthOfCharacters ? "..." : ""))
-                                    
                                         .font(.custom("Sora-SemiBold", size: 16))
                                     Text("\(coffee.coffeType.rawValue.capitalized)")
                                         .font(.custom("Sora-Regular", size: 12))
@@ -142,9 +143,43 @@ struct OrderPageView: View {
                             .background(.darkBrown)
                         
                         if coffee.hasDiscount{
-                           DiscountCardView()
-                                .padding(.top)
+                            DiscountCardView()
+                                .padding(.vertical)
                         }
+                        
+                        VStack(alignment:.leading){
+                            Text("Payment Summary")
+                                .font(.custom("Sora-SemiBold", size: 16))
+                            
+                            VStack(alignment:.leading, spacing:20){
+                                HStack{
+                                    Text("Price")
+                                        .font(.custom("Sora-Regular", size: 14))
+                                        .foregroundStyle(.ashBlack)
+                                    Spacer()
+                                    Text("$\(String(format: "%.2f", coffee.price))")
+                                        .font(.custom("Sora-SemiBold", size: 14))
+                                    
+                                }
+                                
+                                HStack{
+                                    Text("Delivery Fee")
+                                        .font(.custom("Sora-Regular", size: 14))
+                                        .foregroundStyle(.ashBlack)
+                                    
+                                    Spacer()
+                                    
+                                    Text("$\(String(format: "%.2f", previousDeliveryFee))")
+                                        .strikethrough()
+                                        .foregroundStyle(.ashBlack)
+                                    
+                                    Text("$\(String(format: "%.2f", deliveryFee))")
+                                        .font(.custom("Sora-SemiBold", size: 14))
+                                }
+                            }
+                            .padding(.top)
+                        }
+                        .padding(.top)
                         
                         
                     }
@@ -157,7 +192,7 @@ struct OrderPageView: View {
                 
                 VStack {
                     Text("Order")
-                  
+                    
                 }
                 .frame(maxWidth: .infinity)
                 
@@ -165,7 +200,7 @@ struct OrderPageView: View {
             }
             
         }
-        .padding(.horizontal, 30)
+        .padding(.horizontal,40)
         .navigationTitle("Order")
         .navigationBarTitleDisplayMode(.inline)
         
