@@ -13,7 +13,7 @@ struct CoffeeDetailView: View {
     @State private var showingAlert:Bool = false
     @State private var alertMessage:String = ""
     
-    let coffee:Coffee
+    var coffee:Coffee
     
     var body: some View {
         NavigationStack{

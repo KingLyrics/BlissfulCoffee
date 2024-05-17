@@ -10,8 +10,8 @@ struct HomeView: View {
     ]
     
     var body: some View {
-            VStack {
-                NavigationStack {
+        VStack {
+            NavigationStack {
                 HeaderView()
                 ScrollView {
                     ScrollView(.horizontal, showsIndicators: false) {
@@ -27,7 +27,7 @@ struct HomeView: View {
                             }
                         }
                         .padding(.bottom, 15)
-                       
+                        
                     }
                     
                     LazyVGrid(columns: flexibleColumn, spacing: 30) {
@@ -41,7 +41,7 @@ struct HomeView: View {
                     .padding()
                 }
                 .padding()
-               
+                
             }
         }
     }

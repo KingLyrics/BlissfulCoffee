@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Coffee: Hashable{
+struct Coffee: Hashable, Identifiable{
     let title:String
     let coffeType:CoffeTypes
     let price:Double
@@ -20,6 +20,10 @@ struct Coffee: Hashable{
     var isFavorite:Bool = false
     var hasDiscount:Bool
     var discountAmount:Double?
+    
+    var id:String{
+        title
+    }
     
   
 }
