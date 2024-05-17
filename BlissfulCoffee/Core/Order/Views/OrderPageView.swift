@@ -9,7 +9,11 @@ import SwiftUI
 
 struct OrderPageView: View {
     @ObservedObject private var viewModel:OrderViewModel
+    @State private var selectedPaymentOption:PaymentOptions = .cash
+    @State private var isSheetPresented = false
+
     
+    let paymentTypes:[PaymentOptions] = PaymentOptions.allCases
     let coffee:Coffee
     let maxLengthOfCharacters = 5
     
@@ -189,6 +193,17 @@ struct OrderPageView: View {
                                         .font(.custom("Sora-ExtraBold", size: 16))
                                     
                                 }
+                                VStack(alignment:.leading, spacing: 20){
+                                    Text("Selected Payment Method: \(selectedPaymentOption.rawValue)")
+                                        .font(.custom("Sora-SemiBold", size: 15))
+                                    
+                                    Button("Choose Payment Options"){
+                                        
+                                    }
+                                    
+                                }
+                                .padding(.top)
+
                             }
                             .padding(.top)
                         }
@@ -202,9 +217,6 @@ struct OrderPageView: View {
                 Spacer()
                 
                 VStack {
-                    HStack{
-                        
-                    }
                     Text("Order")
                     
                 }
