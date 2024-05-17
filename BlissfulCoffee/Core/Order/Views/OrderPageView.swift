@@ -193,8 +193,6 @@ struct OrderPageView: View {
                             .padding(.top)
                         }
                         .padding(.top)
-                        
-                        
                     }
                     
                     
@@ -204,6 +202,9 @@ struct OrderPageView: View {
                 Spacer()
                 
                 VStack {
+                    HStack{
+                        
+                    }
                     Text("Order")
                     
                 }

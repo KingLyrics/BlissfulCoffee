@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A8707D5B2BF73E4000C8C6CE /* DiscountCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8707D5A2BF73E4000C8C6CE /* DiscountCardView.swift */; };
 		A8707D5E2BF753B900C8C6CE /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8707D5D2BF753B900C8C6CE /* OrderViewModel.swift */; };
+		A8707D622BF758DC00C8C6CE /* PaymentOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8707D612BF758DC00C8C6CE /* PaymentOptions.swift */; };
 		A8716BCF2BF5D1D20094CC20 /* OrderPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8716BCE2BF5D1D20094CC20 /* OrderPageView.swift */; };
 		A890959D2BF364E000B010DC /* BlissfulCoffeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890959C2BF364E000B010DC /* BlissfulCoffeeApp.swift */; };
 		A890959F2BF364E000B010DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890959E2BF364E000B010DC /* ContentView.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		A8707D5A2BF73E4000C8C6CE /* DiscountCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCardView.swift; sourceTree = "<group>"; };
 		A8707D5D2BF753B900C8C6CE /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		A8707D612BF758DC00C8C6CE /* PaymentOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOptions.swift; sourceTree = "<group>"; };
 		A8716BCE2BF5D1D20094CC20 /* OrderPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPageView.swift; sourceTree = "<group>"; };
 		A89095992BF364E000B010DC /* BlissfulCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlissfulCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A890959C2BF364E000B010DC /* BlissfulCoffeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlissfulCoffeeApp.swift; sourceTree = "<group>"; };
@@ -95,12 +97,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		A8707D5F2BF758B600C8C6CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A8707D5A2BF73E4000C8C6CE /* DiscountCardView.swift */,
+				A8716BCE2BF5D1D20094CC20 /* OrderPageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A8716BCD2BF5D1BC0094CC20 /* Order */ = {
 			isa = PBXGroup;
 			children = (
 				A8707D5C2BF753AA00C8C6CE /* ViewModel */,
-				A8716BCE2BF5D1D20094CC20 /* OrderPageView.swift */,
-				A8707D5A2BF73E4000C8C6CE /* DiscountCardView.swift */,
+				A8707D5F2BF758B600C8C6CE /* Views */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -160,6 +170,7 @@
 		A89095AE2BF386FB00B010DC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A8707D612BF758DC00C8C6CE /* PaymentOptions.swift */,
 				A89095C52BF3B04D00B010DC /* CoffeTypes.swift */,
 				A89095C72BF3B59000B010DC /* Coffee.swift */,
 				A89095EA2BF4D5B200B010DC /* Sizes.swift */,
@@ -369,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8707D622BF758DC00C8C6CE /* PaymentOptions.swift in Sources */,
 				A8707D5B2BF73E4000C8C6CE /* DiscountCardView.swift in Sources */,
 				A89095BE2BF39B9200B010DC /* HeaderView.swift in Sources */,
 				A89095BA2BF390EC00B010DC /* LaunchScreen.swift in Sources */,
