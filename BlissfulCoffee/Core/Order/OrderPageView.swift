@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct OrderPageView: View {
-    @State private var previousDeliveryFee:Double = 2.0
-    @State private var deliveryFee:Double = 1.0
-    @State private var itemCount:Int = 1
+    @ObservedObject private var viewModel:OrderViewModel
     
     let coffee:Coffee
     let maxLengthOfCharacters = 5
     
-    var coffeeName: String
-    
     init(coffee: Coffee) {
+        self.viewModel = OrderViewModel(coffee: coffee)
         self.coffee = coffee
         self.coffeeName = coffee.title
     }
+    
+    var coffeeName: String
+
+
     
     
     
@@ -110,10 +111,10 @@ struct OrderPageView: View {
                             
                             HStack(spacing:10){
                                 Button(action: {
-                                    itemCount -= 1
+                                    viewModel.itemCount -= 1
                                     
-                                    if itemCount < 1{
-                                        itemCount = 1
+                                    if viewModel.itemCount < 1{
+                                        viewModel.itemCount = 1
                                     }
                                     
                                 }, label: {
@@ -124,11 +125,11 @@ struct OrderPageView: View {
                                         .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                                 })
                                 
-                                Text("\(itemCount)")
+                                Text("\(viewModel.itemCount)")
                                     .font(.custom("Sora-SemiBold", size: 14))
                                 
                                 Button(action: {
-                                    itemCount += 1
+                                    viewModel.itemCount += 1
                                 }, label: {
                                     Image(systemName: "plus")
                                         .foregroundStyle(.ashBlack)
@@ -157,7 +158,7 @@ struct OrderPageView: View {
                                         .font(.custom("Sora-Regular", size: 14))
                                         .foregroundStyle(.ashBlack)
                                     Spacer()
-                                    Text("$\(String(format: "%.2f", Double(itemCount) * coffee.price))")
+                                    Text("$\(String(format: "%.2f", viewModel.coffeePrice))")
                                         .font(.custom("Sora-SemiBold", size: 14))
                                     
                                 }
@@ -169,11 +170,11 @@ struct OrderPageView: View {
                                     
                                     Spacer()
                                     
-                                    Text("$\(String(format: "%.2f", previousDeliveryFee))")
+                                    Text("$\(String(format: "%.2f", viewModel.previousDeliveryFee))")
                                         .strikethrough()
                                         .foregroundStyle(.ashBlack)
                                     
-                                    Text("$\(String(format: "%.2f", deliveryFee))")
+                                    Text("$\(String(format: "%.2f", viewModel.deliveryFee))")
                                         .font(.custom("Sora-SemiBold", size: 14))
                                     
                                 }
@@ -182,6 +183,10 @@ struct OrderPageView: View {
                                     Text("Total")
                                         .font(.custom("Sora-Bold", size: 16))
                                     
+                                    Spacer()
+                                    
+                                    Text("$\(String(format: "%.2f", viewModel.totalPrice))")
+                                        .font(.custom("Sora-ExtraBold", size: 16))
                                     
                                 }
                             }
