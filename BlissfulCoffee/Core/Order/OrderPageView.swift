@@ -11,7 +11,7 @@ struct OrderPageView: View {
     
     @State private var itemCount:Int = 1
     let coffee:Coffee
-    let maxLengthOfCharacters = 7
+    let maxLengthOfCharacters = 5
     
     var coffeeName: String
     
@@ -86,7 +86,7 @@ struct OrderPageView: View {
                         Divider()
                             .frame(height:1)
                         
-                        HStack(spacing:80){
+                        HStack(spacing:120){
                             HStack{
                                 Image(coffee.image)
                                     .resizable()
