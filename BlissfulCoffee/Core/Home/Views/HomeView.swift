@@ -26,7 +26,8 @@ struct HomeView: View {
                                 }
                             }
                         }
-                        .padding(.bottom, 30)
+                        .padding(.bottom, 15)
+                       
                     }
                     
                     LazyVGrid(columns: flexibleColumn, spacing: 30) {

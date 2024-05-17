@@ -30,7 +30,7 @@ struct HeaderView: View {
             }
             .padding()
         }
-        .padding(.bottom,30)
+        .padding(.bottom,90)  //30
         .frame(maxWidth:.infinity)
         .background(                    
             LinearGradient(gradient: Gradient(colors: [Color(.darkGray), .black]), startPoint: .leading, endPoint: .trailing)
