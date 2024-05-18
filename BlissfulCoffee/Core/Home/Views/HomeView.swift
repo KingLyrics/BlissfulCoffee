@@ -2,7 +2,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var selectedCategory: CoffeTypes = .allCoffee
-    @StateObject var viewModel = HomeViewModel(service: HomeService())
+    @ObservedObject var viewModel:HomeViewModel
     
     private let flexibleColumn = [
         GridItem(.flexible(), spacing: 50),
@@ -48,5 +48,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(viewModel: HomeViewModel(service: HomeService()))
 }

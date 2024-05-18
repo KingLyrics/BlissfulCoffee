@@ -9,10 +9,11 @@ import SwiftUI
 
 struct MainTabBar: View {
     @State private var coffees = DeveloperPreview().coffees
-    
+    @EnvironmentObject var viewModel:HomeViewModel
+
     var body: some View {
         TabView {
-            HomeView()
+            HomeView(viewModel: viewModel)
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
@@ -36,4 +37,6 @@ struct MainTabBar: View {
 
 #Preview {
     MainTabBar()
+        .environmentObject(HomeViewModel(service: HomeService()))
+
 }
