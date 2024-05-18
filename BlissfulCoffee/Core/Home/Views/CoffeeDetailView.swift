@@ -36,12 +36,12 @@ struct CoffeeDetailView: View {
                                 .font(.custom("Sora-Regular", size: 15))
                                 .foregroundStyle(.gray)
                             
-                            //                            HStack(spacing:15){
-                            //                                IconBackground(imageName: "bicycle")
-                            //                                IconBackground(imageName: "cup.and.saucer")
-                            //                                IconBackground(imageName: "takeoutbag.and.cup.and.straw")
-                            //                            }
-                            //                            .offset(x:67,y:10)
+                                                        HStack(spacing:15){
+                                                            IconBackground(imageName: "bicycle")
+                                                            IconBackground(imageName: "cup.and.saucer")
+                                                            IconBackground(imageName: "takeoutbag.and.cup.and.straw")
+                                                        }
+                                                        .offset(x:67,y:10)
                             
                         }
                         
@@ -100,6 +100,7 @@ struct CoffeeDetailView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         isFavorite.toggle()
+                        
                         alertMessage = isFavorite ? "\(coffee.title) has been added to your favorites." : "\(coffee.title) has been removed from your favorites."
                         showingAlert = true
                     }) {

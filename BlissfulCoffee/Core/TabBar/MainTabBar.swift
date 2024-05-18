@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainTabBar: View {
     @State private var coffees = DeveloperPreview().coffees
-
+    
     var body: some View {
         TabView {
             HomeView()
@@ -18,7 +18,7 @@ struct MainTabBar: View {
                     Text("Home")
                 }
             
-            FavoriteView(coffees: $coffees)
+            FavoriteView(favoriteCoffees: $coffees)
                 .tabItem  {
                     Image(systemName: "heart")
                     Text("Favorite")

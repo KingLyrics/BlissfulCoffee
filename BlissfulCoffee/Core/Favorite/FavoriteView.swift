@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct FavoriteView: View {
-    @Binding var coffees: [Coffee]
+    @Binding var favoriteCoffees: [Coffee]
     
     var body: some View {
         NavigationStack{
             List {
-                ForEach(coffees.filter { $0.isFavorite }) { coffee in
+                ForEach(favoriteCoffees.filter { $0.isFavorite }) { coffee in
                     HStack {
                         Image(coffee.image)
                             .resizable()
@@ -34,5 +34,5 @@ struct FavoriteView: View {
 }
 
 #Preview {
-    FavoriteView(coffees: .constant(DeveloperPreview().coffees))
+    FavoriteView(favoriteCoffees: .constant(DeveloperPreview().coffees))
 }
