@@ -120,7 +120,7 @@ struct CoffeeDetailView: View {
                             .foregroundStyle(.gray)
                         Text("$ \(String(format: "%.2f", coffee.price))")
                             .font(.custom("Sora-SemiBold", size: 18))
-                            .foregroundStyle(.brown)
+                            .foregroundStyle(.darkBrown)
                     }
                     
                     NavigationLink(destination: OrderPageView(coffee: coffee)) {
@@ -128,7 +128,7 @@ struct CoffeeDetailView: View {
                             .font(.custom("Sora-SemiBold", size: 16))
                             .foregroundColor(.white)
                             .frame(width: 217, height: 56)
-                            .background(Color.brown)
+                            .background(.darkBrown)
                             .clipShape(RoundedRectangle(cornerRadius: 16))
                     }
                 }
