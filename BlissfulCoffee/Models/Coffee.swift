@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Coffee: Hashable, Identifiable{
+struct Coffee: Hashable, Identifiable, Equatable{
     let title:String
     let coffeType:CoffeTypes
     let price:Double

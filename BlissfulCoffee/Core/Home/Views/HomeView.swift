@@ -32,7 +32,7 @@ struct HomeView: View {
                     
                     LazyVGrid(columns: flexibleColumn, spacing: 30) {
                         ForEach(viewModel.coffees, id: \.self) { coffee in
-                            NavigationLink(destination: CoffeeDetailView(coffee: coffee)) {
+                            NavigationLink(destination: CoffeeDetailView(viewModel: viewModel, coffee: coffee)) {
                                 CoffeeCardView(coffee: coffee)
                             }
                             .buttonStyle(PlainButtonStyle())
@@ -49,4 +49,6 @@ struct HomeView: View {
 
 #Preview {
     HomeView(viewModel: HomeViewModel(service: HomeService()))
+      
+
 }

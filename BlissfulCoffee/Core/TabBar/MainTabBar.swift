@@ -5,11 +5,11 @@
 //  Created by Ekomobong Edeme on 15/05/2024.
 //
 
+
 import SwiftUI
 
 struct MainTabBar: View {
-    @State private var coffees = DeveloperPreview().coffees
-    @EnvironmentObject var viewModel:HomeViewModel
+    @StateObject var viewModel = HomeViewModel(service: HomeService())
 
     var body: some View {
         TabView {
@@ -18,9 +18,9 @@ struct MainTabBar: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            
-            FavoriteView(favoriteCoffees: $coffees)
-                .tabItem  {
+             
+            FavoriteView(favoriteCoffees: $viewModel.favoriteCoffees)
+                .tabItem {
                     Image(systemName: "heart")
                     Text("Favorite")
                 }
@@ -30,7 +30,6 @@ struct MainTabBar: View {
                     Image(systemName: "bag")
                     Text("Cart")
                 }
-            
         }
     }
 }
@@ -38,5 +37,5 @@ struct MainTabBar: View {
 #Preview {
     MainTabBar()
         .environmentObject(HomeViewModel(service: HomeService()))
-
 }
+
