@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A822BD212C08BAC2005C14A5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822BD202C08BAC2005C14A5 /* MapView.swift */; };
+		A822BD232C09B0B9005C14A5 /* DeliveryMapRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822BD222C09B0B9005C14A5 /* DeliveryMapRepresentable.swift */; };
+		A822BD252C09B621005C14A5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822BD242C09B621005C14A5 /* LocationManager.swift */; };
 		A8707D5B2BF73E4000C8C6CE /* DiscountCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8707D5A2BF73E4000C8C6CE /* DiscountCardView.swift */; };
 		A8707D5E2BF753B900C8C6CE /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8707D5D2BF753B900C8C6CE /* OrderViewModel.swift */; };
 		A8707D622BF758DC00C8C6CE /* PaymentOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8707D612BF758DC00C8C6CE /* PaymentOptions.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A822BD202C08BAC2005C14A5 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		A822BD222C09B0B9005C14A5 /* DeliveryMapRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMapRepresentable.swift; sourceTree = "<group>"; };
+		A822BD242C09B621005C14A5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A8707D5A2BF73E4000C8C6CE /* DiscountCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCardView.swift; sourceTree = "<group>"; };
 		A8707D5D2BF753B900C8C6CE /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		A8707D612BF758DC00C8C6CE /* PaymentOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOptions.swift; sourceTree = "<group>"; };
@@ -91,6 +97,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A822BD1D2C08B69B005C14A5 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				A822BD202C08BAC2005C14A5 /* MapView.swift */,
+				A822BD222C09B0B9005C14A5 /* DeliveryMapRepresentable.swift */,
+				A822BD242C09B621005C14A5 /* LocationManager.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		A8707D5C2BF753AA00C8C6CE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +208,7 @@
 		A89095B12BF3871700B010DC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A822BD1D2C08B69B005C14A5 /* Map */,
 				A89095E22BF4C0DC00B010DC /* Cart */,
 				A89095B42BF387B000B010DC /* Components */,
 				A89095DF2BF4C07F00B010DC /* Favorite */,
@@ -389,7 +406,9 @@
 				A89095BA2BF390EC00B010DC /* LaunchScreen.swift in Sources */,
 				A89095ED2BF4DF7400B010DC /* SizeCells.swift in Sources */,
 				A89095C42BF3ABD000B010DC /* CategoryCells.swift in Sources */,
+				A822BD252C09B621005C14A5 /* LocationManager.swift in Sources */,
 				A89095E42BF4C0E700B010DC /* CartView.swift in Sources */,
+				A822BD212C08BAC2005C14A5 /* MapView.swift in Sources */,
 				A89095DE2BF4BF8A00B010DC /* MainTabBar.swift in Sources */,
 				A8716BCF2BF5D1D20094CC20 /* OrderPageView.swift in Sources */,
 				A89095C62BF3B04D00B010DC /* CoffeTypes.swift in Sources */,
@@ -409,6 +428,7 @@
 				A89095E92BF4CE3000B010DC /* ExpandableTextView.swift in Sources */,
 				A8707D642BF75C6700C8C6CE /* PaymentSelectionView.swift in Sources */,
 				A89095C02BF39F2400B010DC /* SearchBar.swift in Sources */,
+				A822BD232C09B0B9005C14A5 /* DeliveryMapRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +566,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BlissfulCoffee/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location for the delivery driver";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -576,6 +597,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BlissfulCoffee/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location for the delivery driver";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

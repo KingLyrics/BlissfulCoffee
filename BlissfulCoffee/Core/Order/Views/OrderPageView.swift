@@ -220,14 +220,17 @@ struct OrderPageView: View {
                     Button(action: {
                         
                     }, label: {
-                        Text("Order")
-                            .font(.custom("Sora-SemiBold", size: 16))
-                            .foregroundColor(.white)
-                            .frame(width: 300, height: 56)
-                            .background(.darkBrown)
-                            .clipShape(RoundedRectangle(cornerRadius: 16))
-                            .padding(.leading, 8)
+                        NavigationLink(destination: MapView()) {
+                            Text("Order")
+                                .font(.custom("Sora-SemiBold", size: 16))
+                                .foregroundColor(.white)
+                                .frame(width: 300, height: 56)
+                                .background(.darkBrown)
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                                .padding(.leading, 8)
 
+                        }
+                       
                     })
                     
                 }

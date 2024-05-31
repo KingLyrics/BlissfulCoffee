@@ -50,7 +50,7 @@ struct CoffeeDetailView: View {
                         }
                         
                         HStack {
-                            Image(systemName: "star.fill")
+                            Image(.star)
                                 .resizable()
                                 .frame(width: 20, height: 20)
                             HStack {
