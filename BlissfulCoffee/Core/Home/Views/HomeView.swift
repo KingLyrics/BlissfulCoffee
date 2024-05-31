@@ -23,6 +23,7 @@ struct HomeView: View {
                                 )
                                 .onTapGesture {
                                     selectedCategory = category
+                                    viewModel.filterCoffees(by: category)
                                 }
                             }
                         }
@@ -31,7 +32,7 @@ struct HomeView: View {
                     }
                     
                     LazyVGrid(columns: flexibleColumn, spacing: 30) {
-                        ForEach(viewModel.coffees, id: \.self) { coffee in
+                        ForEach(viewModel.filteredCoffees, id: \.self) { coffee in
                             NavigationLink(destination: CoffeeDetailView(viewModel: viewModel, coffee: coffee)) {
                                 CoffeeCardView(coffee: coffee)
                             }

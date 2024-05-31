@@ -5,10 +5,13 @@
 //  Created by Ekomobong Edeme on 31/05/2024.
 //
 
+
+import Foundation
 import CoreLocation
 
-class LocationManager:NSObject, ObservableObject{
+class LocationManager: NSObject, ObservableObject {
     private let locationManager = CLLocationManager()
+    @Published var lastLocation: CLLocationCoordinate2D?
     
     override init() {
         super.init()
@@ -19,10 +22,14 @@ class LocationManager:NSObject, ObservableObject{
     }
 }
 
-extension LocationManager:CLLocationManagerDelegate{
+extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard !locations.isEmpty else {return}
+        guard let location = locations.last else { return }
+        DispatchQueue.main.async {
+            self.lastLocation = location.coordinate
+        }
         locationManager.stopUpdatingLocation()
     }
 }
+
 

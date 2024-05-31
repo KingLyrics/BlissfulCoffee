@@ -10,6 +10,7 @@ import Foundation
 class HomeViewModel: ObservableObject {
     @Published var coffees = [Coffee]()
     @Published var favoriteCoffees = [Coffee]()
+    @Published var filteredCoffees = [Coffee]()
     
     private let service: HomeService
     
@@ -36,5 +37,12 @@ class HomeViewModel: ObservableObject {
     private func updateFavoriteCoffees() {
         favoriteCoffees = coffees.filter { $0.isFavorite }
     }
-}
+    
+    func filterCoffees(by category: CoffeTypes) {
+        if category == .allCoffee {
+            filteredCoffees = coffees
+        } else {
+            filteredCoffees = coffees.filter { $0.coffeType == category }
+        }
+    }}
 

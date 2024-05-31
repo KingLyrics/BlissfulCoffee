@@ -55,6 +55,23 @@ class DeveloperPreview{
                description: "Similar to a latte but with a thicker layer of milk foam, typically around one-third of the total drink. The foam adds a delightful texture and a touch of sweetness to the coffee.",
                sizes: [.Small, .Large], image: .coffee4, hasDiscount: true, discountAmount: 2.3),
         
+        Coffee(title: "Frank's Delight",
+               coffeType: .ristretto,
+               price: 9.10,
+               rating: 5.0,
+               noOfComments: 400,
+               description: "Experience the diverse feeling of  just amazing tastes.",
+               sizes: [.Small, .Large], image: .coffee4, hasDiscount: false, discountAmount: 2.3),
+        
+        
+        Coffee(title: "Mikes's Secret",
+               coffeType: .mocha,
+               price: 3.10,
+               rating: 2.0,
+               noOfComments: 20,
+               description: "Similar to a latte but with a thicker layer of milk foam, typically around one-third of the total drink. The foam adds a delightful texture and a touch of sweetness to the coffee.",
+               sizes: [.Small, .Large], image: .coffee2, hasDiscount: false, discountAmount: 2.3),
+        
         
         
     ]
