@@ -1,11 +1,3 @@
-//
-//  FavoriteView.swift
-//  BlissfulCoffee
-//
-//  Created by Ekomobong Edeme on 15/05/2024.
-//
-
-
 import SwiftUI
 
 struct FavoriteView: View {
@@ -34,22 +26,22 @@ struct FavoriteView: View {
                                 Text(coffee.coffeType.rawValue.capitalized)
                                     .font(.subheadline)
                                     .foregroundColor(.gray)
-                                
                             }
                         }
                     }
-                    
+                    .onDelete(perform: deleteItems)
                 }
-                
+                .navigationTitle("Favorite Coffees")
             }
-            
         }
     }
     
+    private func deleteItems(at offsets: IndexSet) {
+        favoriteCoffees.remove(atOffsets: offsets)
+    }
 }
 
 #Preview {
     FavoriteView(favoriteCoffees: .constant(DeveloperPreview().coffees))
         .environmentObject(HomeViewModel(service: HomeService()))
-
 }

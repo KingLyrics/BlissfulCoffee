@@ -11,6 +11,7 @@ class HomeViewModel: ObservableObject {
     @Published var coffees = [Coffee]()
     @Published var favoriteCoffees = [Coffee]()
     @Published var filteredCoffees = [Coffee]()
+    @Published var cartItems = [CartItems]()
     
     private let service: HomeService
     
@@ -44,5 +45,7 @@ class HomeViewModel: ObservableObject {
         } else {
             filteredCoffees = coffees.filter { $0.coffeType == category }
         }
-    }}
+    }
+
+}
 

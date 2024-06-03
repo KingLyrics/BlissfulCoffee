@@ -24,8 +24,12 @@ struct Coffee: Hashable, Identifiable, Equatable{
     var id:String{
         title
     }
-    
-  
+}
+
+struct CartItems:Identifiable{
+    var id:UUID
+    var coffee:Coffee
+    var quantitiy:Int
 }
 
 
